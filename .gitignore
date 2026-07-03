@@ -30,3 +30,9 @@ desktop.ini
 *.tmp
 *.bak
 ~$*
+
+# Keep selected FEDL distributable executables as portfolio artifacts.
+!FEDL_Data/data preprocessing/dist/
+!FEDL_Data/data preprocessing/dist/RawDataExtractor.exe
+!FEDL_Data/plotting/dist/
+!FEDL_Data/plotting/dist/FEDL_Plotting_Tool.exe

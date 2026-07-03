@@ -67,6 +67,41 @@ After the main workflows, inspect:
 - `20260616Panama/output/duffing_selected/duffing_rbf_metrics.csv`
 - `20260616Panama/output/duffing_selected/figures/duffing_phase_space.png`
 
+## `FEDL_Data`
+
+Check that Python files compile:
+
+```powershell
+py -3 -m compileall -q FEDL_Data
+```
+
+Run the integrated GUI:
+
+```powershell
+cd FEDL_Data\final
+run_fedl_tool.bat
+```
+
+Run standalone preprocessing:
+
+```powershell
+cd "FEDL_Data\data preprocessing"
+run_raw_data_gui.bat
+```
+
+Run standalone plotting:
+
+```powershell
+cd FEDL_Data\plotting
+run_plotting_gui.bat
+```
+
+Representative FEDL output:
+
+- `FEDL_Data/final/outputs/Plot1_V1_Abs_Id_log.png`
+- `FEDL_Data/plotting/outputs/Plot1_V1_Abs_Id_log.png`
+- `FEDL_Data/data preprocessing/raw_data.csv`
+
 ## Notes on Data and Outputs
 
 - Experimental data and generated outputs are intentionally included for

@@ -13,6 +13,8 @@ hardware-aware modeling framework:
 3. Reproduce Panama electricity-demand and Duffing oscillator experiments.
 4. Extend the idea toward AAT transfer-curve libraries that use measured
    amplitude, center, width, and direct curve responses.
+5. Automate FEDL raw measurement preprocessing and plotting for faster lab-data
+   review.
 
 ## Why This Repository Exists
 
@@ -35,6 +37,7 @@ For a quick review, start with these files:
 - [20260616Panama/flow.md](20260616Panama/flow.md): end-to-end AAT sigma to Panama RBF workflow.
 - [20260616Panama/manual.md](20260616Panama/manual.md): practical user manual for sigma extraction and simulation.
 - [new_AAT/README.md](new_AAT/README.md): packaged hardware-aware AAT kernel library.
+- [FEDL_Data/README.md](FEDL_Data/README.md): FEDL raw-data preprocessing and plotting GUI.
 
 ## Project Highlights
 
@@ -42,6 +45,7 @@ For a quick review, start with these files:
 | --- | --- | --- |
 | `20260616Panama` | Transfer-curve sigma extraction, Panama demand forecasting, Duffing reconstruction, interactive plots | CLI scripts, tests, manuals, generated figures, metrics |
 | `new_AAT` | Installable hardware-aware kernel package using measured AAT curve parameters | `pyproject.toml`, package source, pytest tests, config example |
+| `FEDL_Data` | FEDL raw measurement preprocessing and MATLAB-assisted plotting GUI | Tkinter apps, sample raw data, generated plots, distributable executables |
 | `AAT_ap`, `AAT_ap_2`, `AAT_ap_scaled` | Iterative RBF implementations and comparison experiments | reports, guides, metrics, prediction overlays |
 | `RBFRQ` | Gaussian vs rational-quadratic fitting of transfer curves | fitting script, summary CSVs, trend plots |
 | `RBF_Power_Prediction`, `RBF2` | Early reproduction prototypes and baselines | source modules, figure reproduction scripts, baseline comparisons |
@@ -59,6 +63,10 @@ Duffing oscillator reconstruction:
 Transfer-curve Gaussian fitting overview:
 
 ![Gaussian fit overview](20260616Panama/output/my_sigmas/figures/gaussian_fit_overview.png)
+
+FEDL raw-data plotting workflow:
+
+![FEDL plotting output](FEDL_Data/final/outputs/Plot1_V1_Abs_Id_log.png)
 
 ## Technical Stack
 

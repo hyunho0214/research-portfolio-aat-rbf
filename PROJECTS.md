@@ -62,7 +62,39 @@ Why it matters:
 This folder shows the transition from a reproduction script to a reusable
 research package with clearer APIs, test coverage, and documented commands.
 
-## 3. `AAT_ap`, `AAT_ap_2`, `AAT_ap_scaled`
+## 3. `FEDL_Data`
+
+Raw-data preprocessing and plotting tool for FEDL measurement files.
+
+Purpose:
+
+- consolidate Agilent CSV or Keithley Excel measurement outputs into a
+  plot-ready `raw_data.csv`,
+- allow manual column selection, column ordering, and head/tail preview before
+  export,
+- build Series, Group, and Plot definitions from the consolidated table,
+- generate MATLAB plotting scripts for log-scale FEDL device curves,
+- keep representative PNG/SVG/FIG outputs and distributable Windows executables
+  as portfolio evidence.
+
+Key files:
+
+- `README.md`: curated overview and commands.
+- `data preprocessing/raw_data_gui.py`: standalone raw-data extraction GUI.
+- `data preprocessing/build_raw_data.ps1`: scriptable CSV consolidation.
+- `plotting/plotting_gui.py`: standalone plotting GUI.
+- `plotting/matlab_generator.py`: MATLAB script generator.
+- `final/app.py`: integrated two-tab preprocessing plus plotting GUI.
+- `final/outputs/Plot1_V1_Abs_Id_log.png`: representative plotted output.
+- `project_plans/2026-03-20_fedl_plotting_plan.md`: development plan and iteration log.
+
+Why it matters:
+
+This folder demonstrates practical lab automation: converting raw instrument
+exports into traceable plotting input, then generating quick visual checks that
+make repeated device sweeps easier to review and share.
+
+## 4. `AAT_ap`, `AAT_ap_2`, `AAT_ap_scaled`
 
 Iterative RBF experiment branches.
 
@@ -88,7 +120,7 @@ These folders document the development history and the scientific reasoning
 behind implementation choices such as distinct centers, fixed kernel budget,
 and device-to-model sigma scaling.
 
-## 4. `RBFRQ`
+## 5. `RBFRQ`
 
 Transfer-curve model comparison.
 
@@ -109,7 +141,7 @@ Why it matters:
 This folder supports the device-modeling side of the portfolio by showing that
 transfer-curve shape analysis was considered beyond a single Gaussian fit.
 
-## 5. `RBF_Power_Prediction`
+## 6. `RBF_Power_Prediction`
 
 Early paper-reproduction prototype.
 
@@ -128,7 +160,7 @@ Key files:
 - `src/rbf_network.py`, `src/trainer.py`, `src/visualizer.py`: modular prototype code.
 - `Fig4h_*`, `Fig4i_*`, `Fig4j_*`, `Fig4k_*`: generated figure outputs.
 
-## 6. `RBF2`
+## 7. `RBF2`
 
 Baseline and reproducibility refinement.
 
@@ -155,5 +187,7 @@ Key files:
 - Why repeated center-sigma pairs can create redundant RBF basis functions.
 - How `new_AAT` generalizes sigma-only simulations into a measured kernel
   library using amplitude, center, width, and direct curves.
+- How `FEDL_Data` turns raw measurement exports into auditable plotting input
+  and fast visual review outputs.
 - What tradeoffs exist when mapping device-domain voltage parameters into a
   standardized input feature space.
