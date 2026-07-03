@@ -1,0 +1,29 @@
+{
+  "task": "hourly_electricity_forecasting",
+  "data_path": "continuous dataset.csv",
+  "target_column": "nat_demand",
+  "window_length": 10,
+  "c_total": 20,
+  "n_values": [
+    1,
+    2,
+    3
+  ],
+  "best_N": 3,
+  "seed": 0,
+  "shuffle_sigmas": true,
+  "center_mode": "replicated",
+  "sigma_mode": "scaled",
+  "ridge_alpha": 0.0,
+  "sigma_min": 4.8,
+  "sigma_max": 18.1,
+  "sigma_scaling": "experimental geomspace -> divide by selected median -> multiply by train median nearest-center distance",
+  "sigma_distance_reference": 1.731080495382251,
+  "train_years": [
+    2016,
+    2019
+  ],
+  "test_year": 2020,
+  "test_note": "The available 2020 period ends at the final row in the CSV.",
+  "standardization": "X and y scalers fitted on train split only."
+}

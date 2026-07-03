@@ -1,0 +1,26 @@
+{
+  "source": "excel",
+  "source_detail": "Week 24, Jun 2020",
+  "start_date": "2016-01-01",
+  "samples": 38929,
+  "train_samples": 31143,
+  "test_samples": 7786,
+  "window": 10,
+  "split_ratio": 0.8,
+  "total_centers": 20,
+  "n_values": [
+    1,
+    3
+  ],
+  "selected_n": [
+    1,
+    3
+  ],
+  "sigma_min": 2.20000000000006,
+  "sigma_max": 3.400000000000281,
+  "sigma_file": "output\\transfer_sigma_cli_test\\extracted\\sigma_values.csv",
+  "sigma_column": "sigma",
+  "sigma_selection": "logspace",
+  "sigma_candidate_count": 3,
+  "cluster_method": "minibatch"
+}

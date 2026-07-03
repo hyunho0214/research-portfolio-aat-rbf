@@ -1,0 +1,31 @@
+{
+  "input": "templates\\transfer_curve_template.xlsx",
+  "sheet": null,
+  "vg_column": "VG",
+  "id_columns": [
+    "ID_#1",
+    "ID_#2",
+    "ID_#3",
+    "ID_#4",
+    "ID_#5",
+    "ID_#6",
+    "ID_#7",
+    "ID_#8",
+    "ID_#9",
+    "ID_#10",
+    "ID_#11",
+    "ID_#12",
+    "ID_#13",
+    "ID_#14",
+    "ID_#15",
+    "ID_#16",
+    "ID_#17",
+    "ID_#18",
+    "ID_#19",
+    "ID_#20",
+    "ID_#21"
+  ],
+  "use_abs_current": true,
+  "min_sigma_bound": null,
+  "max_sigma_bound": null
+}

@@ -1,0 +1,14 @@
+{
+  "input": "output\\transfer_sigma_extra_column_test\\extra_columns.csv",
+  "sheet": null,
+  "vg_column": "VG",
+  "id_columns": [
+    "ID_#1",
+    "ID_#2",
+    "VD_6V_ID",
+    "VD_7V_ID"
+  ],
+  "use_abs_current": true,
+  "min_sigma_bound": null,
+  "max_sigma_bound": null
+}

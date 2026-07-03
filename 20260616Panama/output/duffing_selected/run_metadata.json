@@ -1,0 +1,24 @@
+{
+  "dt": 0.001,
+  "transient_steps": 100000,
+  "post_steps": 200000,
+  "x0": 0.1,
+  "v0": 0.0,
+  "damping": 0.2,
+  "drive": 0.3,
+  "omega": 1.2,
+  "window": 10,
+  "split_ratio": 0.5,
+  "total_centers": 300,
+  "n_values": [
+    3,
+    80
+  ],
+  "selected_n": [
+    3,
+    80
+  ],
+  "sigma_min": 3.0,
+  "sigma_max": 20.0,
+  "cluster_method": "minibatch"
+}

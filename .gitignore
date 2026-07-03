@@ -1,0 +1,32 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Python build metadata
+build/
+dist/
+*.egg-info/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local scratch files
+*.tmp
+*.bak
+~$*

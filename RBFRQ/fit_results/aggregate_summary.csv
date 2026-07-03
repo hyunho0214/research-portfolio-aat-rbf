@@ -1,0 +1,2 @@
+n_curves,gaussian_win_aic_count,rq_win_aic_count,gaussian_win_bic_count,rq_win_bic_count,mean_gaussian_rmse,mean_rq_rmse,mean_gaussian_r2,mean_rq_r2,mean_gaussian_sigma,std_gaussian_sigma,mean_rq_alpha,std_rq_alpha
+21,2,19,3,18,6.936247757419404e-11,4.7280769549340786e-11,0.6404935950856226,0.6733956939219548,2.7198519556842515,0.22887457249996068,2.605912646940739,2.6076729507955463

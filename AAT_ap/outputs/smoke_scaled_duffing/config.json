@@ -1,0 +1,28 @@
+{
+  "task": "duffing_reconstruction",
+  "window_length": 10,
+  "c_total": 20,
+  "n_values": [
+    1,
+    2,
+    3
+  ],
+  "best_N": 1,
+  "seed": 0,
+  "shuffle_sigmas": true,
+  "train_fraction": 0.5,
+  "transient_steps": 300,
+  "alpha": 1.0,
+  "beta": 0.2,
+  "gamma": 0.3,
+  "omega": 1.2,
+  "dt": 0.01,
+  "n_steps": 3000,
+  "x0": 0.1,
+  "v0": 0.0,
+  "sigma_min": 4.8,
+  "sigma_max": 18.1,
+  "sigma_scaling": "experimental geomspace -> divide by selected median -> multiply by train median nearest-center distance",
+  "sigma_distance_reference": 0.5552385904896691,
+  "standardization": "X and y scalers fitted on train split only."
+}

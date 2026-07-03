@@ -1,0 +1,13 @@
+{
+  "input": "output\\transfer_sigma_cli_test\\synthetic_transfer.csv",
+  "sheet": null,
+  "vg_column": "VG",
+  "id_columns": [
+    "VD_1V_ID",
+    "VD_2V_ID",
+    "VD_3V_ID"
+  ],
+  "use_abs_current": true,
+  "min_sigma_bound": null,
+  "max_sigma_bound": null
+}

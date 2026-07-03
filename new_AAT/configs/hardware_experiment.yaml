@@ -1,0 +1,26 @@
+seed: 0
+output_dir: outputs/hardware_experiment
+
+data:
+  supervised_csv: data/supervised.csv
+  feature_columns: [x1, x2]
+  target_columns: [y]
+  time_col:
+  standardize_targets: true
+
+split:
+  train_fraction: 0.8
+
+kernel_library:
+  path: outputs/kernel_library/kernel_library.csv
+  curves_path: outputs/kernel_library/normalized_transfer_curves.csv
+  filter: {}
+
+encoder:
+  mode: pca_sigmoid
+
+models:
+  variants: [sigma_only, a_sigma, full_gaussian, direct_curve]
+
+readout:
+  ridge_alpha: 0.0
