@@ -102,6 +102,50 @@ Representative FEDL output:
 - `FEDL_Data/plotting/outputs/Plot1_V1_Abs_Id_log.png`
 - `FEDL_Data/data preprocessing/raw_data.csv`
 
+## `memT_BO`
+
+Regenerate the README preview image from the saved prediction grid:
+
+```powershell
+py -3 memT_BO\scripts\make_prediction_preview.py
+```
+
+Compile the curated Bayesian-optimization scripts:
+
+```powershell
+py -3 -m py_compile "memT_BO\TFT\250723 TFT BO_HH\simple TFT BO(ratio-mobility)(Cons&RBF)_csv input.py"
+py -3 -m py_compile "memT_BO\memT\csv input\(ratio,thickness)-retention, excel (ConRBF)_file load_NEW_1.py"
+py -3 -m py_compile "memT_BO\memT\csv input\(ratio,thickness)-retention, excel (RBF)_file load_NEW_1.py"
+py -3 -m py_compile "memT_BO\memT\csv input\새 폴더\(ratio,thickness)-retention, excel (Const+RBF)_file load_NEW_1.py"
+py -3 -m py_compile "memT_BO\memT\csv input\새 폴더\(ratio,thickness)-retention, excel (Const+RQ)_file load.py"
+py -3 -m py_compile "memT_BO\memT\TEST\TFT test.py"
+```
+
+Run the final TFT mobility optimizer:
+
+```powershell
+cd "memT_BO\TFT\250723 TFT BO_HH"
+py -3 "simple TFT BO(ratio-mobility)(Cons&RBF)_csv input.py"
+```
+
+Run the final memtransistor on/off-ratio optimizer:
+
+```powershell
+cd "memT_BO\memT\csv input"
+py -3 "(ratio,thickness)-retention, excel (ConRBF)_file load_NEW_1.py"
+```
+
+Representative memT BO outputs:
+
+- `memT_BO/TFT/250723 TFT BO_HH/mobility_prediction_iter_0.csv`
+- `memT_BO/TFT/250723 TFT BO_HH/next_point_iter_0.csv`
+- `memT_BO/memT/csv input/onoff_ratio_prediction_iter_0.csv`
+- `memT_BO/memT/csv input/next_point_iter_0.csv`
+- `memT_BO/assets/memT_bo_rbf_rq_prediction_comparison.png`
+- `memT_BO/assets/memT_bo_generated_prediction_preview.png`
+- `memT_BO/memT/retention_prediction_iter_final.xlsx`
+- `memT_BO/memT/RBF 결과/*.xlsx`
+
 ## Notes on Data and Outputs
 
 - Experimental data and generated outputs are intentionally included for

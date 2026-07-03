@@ -1,0 +1,24 @@
+# Local scratch and duplicate exports not selected for the portfolio snapshot.
+3D_plot_data_iter_*.csv
+GPR_RBF ver*.py
+GPR_RQ ver*.py
+GPR_RQ _w caption_2.2.py
+GPR_Simple_*.py
+simple TFT BO*.py
+untitled*.py
+*.zip
+
+# Older TFT prototypes and duplicate outputs. The 250723 package is retained.
+TFT/250528*.pptx
+TFT/250702*.pptx
+TFT/experiment_data*.csv
+TFT/mobility_prediction_iter_*.csv
+TFT/mobility_prediction_iter_*.xlsx
+TFT/next_point_iter_0.csv
+TFT/simple TFT BO*.py
+
+# Earlier memtransistor prototypes replaced by csv-input workflows.
+memT/(ratio,thickness)-retention*.py
+memT/ratio-retention (RBF).py
+memT/csv input/*/(ratio,thickness)-retention, excel (Const+RBF)_file load.py
+memT/csv input/*/(ratio,thickness)-retention, excel (Const+RBF)_file load_NEW.py

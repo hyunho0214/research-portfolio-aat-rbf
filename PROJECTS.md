@@ -94,7 +94,52 @@ This folder demonstrates practical lab automation: converting raw instrument
 exports into traceable plotting input, then generating quick visual checks that
 make repeated device sweeps easier to review and share.
 
-## 4. `AAT_ap`, `AAT_ap_2`, `AAT_ap_scaled`
+## 4. `memT_BO`
+
+Bayesian optimization workflow for TFT and memtransistor process-condition
+screening.
+
+Purpose:
+
+- use Gaussian-process regression and Expected Improvement to recommend the
+  next process condition,
+- validate the optimization approach first on TFT mobility data,
+- extend the workflow to memtransistor log on/off-ratio optimization,
+- compare kernel choices such as RBF, Constant x RBF, Rational Quadratic, and
+  Matern,
+- save prediction grids, confidence intervals, experimental points, and
+  next-point recommendations as auditable CSV/Excel artifacts.
+
+Key files:
+
+- `README.md`: curated overview and commands.
+- `CURATION.md`: what was kept, what was left out, and why.
+- `TFT/250723 TFT BO_HH/simple TFT BO(ratio-mobility)(Cons&RBF)_csv input.py`:
+  final TFT mobility optimizer using CSV input.
+- `TFT/250723 TFT BO_HH/mobility_prediction_iter_0.csv`: saved TFT prediction
+  grid with confidence intervals.
+- `TFT/250723 TFT BO_HH/next_point_iter_0.csv`: next recommended TFT process
+  condition.
+- `memT/csv input/(ratio,thickness)-retention, excel (ConRBF)_file load_NEW_1.py`:
+  final Constant x RBF memtransistor optimizer.
+- `memT/csv input/(ratio,thickness)-retention, excel (RBF)_file load_NEW_1.py`:
+  RBF comparison workflow.
+- `memT/csv input/onoff_ratio_prediction_iter_0.csv`: saved memtransistor
+  prediction grid.
+- `memT/csv input/next_point_iter_0.csv`: next recommended memtransistor
+  process condition.
+- `memT/TEST/TFT test.py`: TFT process FOM pre-test using mobility, Vth, and
+  subthreshold swing.
+- `memT/RBF 결과/`: saved RBF and Constant x RBF parameter-sweep outputs.
+
+Why it matters:
+
+This folder shows how experimental-device work was turned into an iterative
+optimization loop: select a candidate grid, fit a surrogate model, score
+Expected Improvement, recommend the next experiment, and preserve each
+iteration for review.
+
+## 5. `AAT_ap`, `AAT_ap_2`, `AAT_ap_scaled`
 
 Iterative RBF experiment branches.
 
@@ -120,7 +165,7 @@ These folders document the development history and the scientific reasoning
 behind implementation choices such as distinct centers, fixed kernel budget,
 and device-to-model sigma scaling.
 
-## 5. `RBFRQ`
+## 6. `RBFRQ`
 
 Transfer-curve model comparison.
 
@@ -141,7 +186,7 @@ Why it matters:
 This folder supports the device-modeling side of the portfolio by showing that
 transfer-curve shape analysis was considered beyond a single Gaussian fit.
 
-## 6. `RBF_Power_Prediction`
+## 7. `RBF_Power_Prediction`
 
 Early paper-reproduction prototype.
 
@@ -160,7 +205,7 @@ Key files:
 - `src/rbf_network.py`, `src/trainer.py`, `src/visualizer.py`: modular prototype code.
 - `Fig4h_*`, `Fig4i_*`, `Fig4j_*`, `Fig4k_*`: generated figure outputs.
 
-## 7. `RBF2`
+## 8. `RBF2`
 
 Baseline and reproducibility refinement.
 
@@ -182,6 +227,8 @@ Key files:
 
 - How experimental transfer-curve parameters were converted into machine-learning
   kernel parameters.
+- How Bayesian optimization converted TFT and memtransistor process grids into
+  next-experiment recommendations.
 - Why chronological splitting and train-only standardization matter for
   time-series forecasting.
 - Why repeated center-sigma pairs can create redundant RBF basis functions.

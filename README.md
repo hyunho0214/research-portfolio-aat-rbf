@@ -15,6 +15,8 @@ hardware-aware modeling framework:
    amplitude, center, width, and direct curve responses.
 5. Automate FEDL raw measurement preprocessing and plotting for faster lab-data
    review.
+6. Apply Bayesian optimization to TFT and memtransistor process-condition
+   screening with saved next-experiment recommendations.
 
 ## Why This Repository Exists
 
@@ -38,6 +40,7 @@ For a quick review, start with these files:
 - [20260616Panama/manual.md](20260616Panama/manual.md): practical user manual for sigma extraction and simulation.
 - [new_AAT/README.md](new_AAT/README.md): packaged hardware-aware AAT kernel library.
 - [FEDL_Data/README.md](FEDL_Data/README.md): FEDL raw-data preprocessing and plotting GUI.
+- [memT_BO/README.md](memT_BO/README.md): Bayesian optimization workflow for TFT and memtransistor process screening.
 
 ## Project Highlights
 
@@ -46,6 +49,7 @@ For a quick review, start with these files:
 | `20260616Panama` | Transfer-curve sigma extraction, Panama demand forecasting, Duffing reconstruction, interactive plots | CLI scripts, tests, manuals, generated figures, metrics |
 | `new_AAT` | Installable hardware-aware kernel package using measured AAT curve parameters | `pyproject.toml`, package source, pytest tests, config example |
 | `FEDL_Data` | FEDL raw measurement preprocessing and MATLAB-assisted plotting GUI | Tkinter apps, sample raw data, generated plots, distributable executables |
+| `memT_BO` | Bayesian optimization of TFT and memtransistor process conditions | GPR/EI scripts, kernel comparisons, seed CSVs, prediction grids, next-point recommendations |
 | `AAT_ap`, `AAT_ap_2`, `AAT_ap_scaled` | Iterative RBF implementations and comparison experiments | reports, guides, metrics, prediction overlays |
 | `RBFRQ` | Gaussian vs rational-quadratic fitting of transfer curves | fitting script, summary CSVs, trend plots |
 | `RBF_Power_Prediction`, `RBF2` | Early reproduction prototypes and baselines | source modules, figure reproduction scripts, baseline comparisons |
@@ -68,12 +72,22 @@ FEDL raw-data plotting workflow:
 
 ![FEDL plotting output](FEDL_Data/final/outputs/Plot1_V1_Abs_Id_log.png)
 
+Memtransistor Bayesian-optimization RBF/RQ comparison:
+
+![Memtransistor BO RBF/RQ prediction comparison](memT_BO/assets/memT_bo_rbf_rq_prediction_comparison.png)
+
+Regenerated preview from saved memT BO CSV output:
+
+![Memtransistor BO generated prediction preview](memT_BO/assets/memT_bo_generated_prediction_preview.png)
+
 ## Technical Stack
 
 - Python, NumPy, pandas, SciPy, scikit-learn, matplotlib
 - openpyxl for Excel-based experimental data ingestion
 - pytest for smoke and unit tests
 - PowerShell-oriented command examples for Windows lab workflows
+- GaussianProcessRegressor and Expected Improvement for process-condition
+  Bayesian optimization
 
 ## Notes
 
