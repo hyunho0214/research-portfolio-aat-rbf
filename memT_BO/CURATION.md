@@ -29,7 +29,7 @@ files that best support a portfolio review.
 | Earlier prototype | `main/main.py`, `main/file_input.py`, `main/hello.csv` |
 | Saved result evidence | `memT/RBF 결과/*.xlsx`, `memT/retention_prediction_iter_*.xlsx` |
 | Supporting artifacts | `TFT BO 기초 교육.pptx`, `memT/band_structure_comparison.png`, `memT/memt BO.opj` |
-| README visuals | `assets/memT_bo_rbf_rq_prediction_comparison.png`, `assets/memT_bo_generated_prediction_preview.png` |
+| README visuals | `assets/memT_bo_rbf_iteration_comparison.png`, `assets/memT_bo_generated_prediction_preview.png` |
 
 ## Local Files Excluded From Git
 

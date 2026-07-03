@@ -72,9 +72,12 @@ FEDL raw-data plotting workflow:
 
 ![FEDL plotting output](FEDL_Data/final/outputs/Plot1_V1_Abs_Id_log.png)
 
-Memtransistor Bayesian-optimization RBF/RQ comparison:
+Memtransistor Bayesian-optimization RBF iteration comparison:
 
-![Memtransistor BO RBF/RQ prediction comparison](memT_BO/assets/memT_bo_rbf_rq_prediction_comparison.png)
+Initial six-condition training result versus the final RBF model after adding
+one additional measured condition:
+
+![Memtransistor BO RBF iteration comparison](memT_BO/assets/memT_bo_rbf_iteration_comparison.png)
 
 Regenerated preview from saved memT BO CSV output:
 

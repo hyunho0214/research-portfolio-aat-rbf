@@ -141,7 +141,7 @@ Representative memT BO outputs:
 - `memT_BO/TFT/250723 TFT BO_HH/next_point_iter_0.csv`
 - `memT_BO/memT/csv input/onoff_ratio_prediction_iter_0.csv`
 - `memT_BO/memT/csv input/next_point_iter_0.csv`
-- `memT_BO/assets/memT_bo_rbf_rq_prediction_comparison.png`
+- `memT_BO/assets/memT_bo_rbf_iteration_comparison.png`
 - `memT_BO/assets/memT_bo_generated_prediction_preview.png`
 - `memT_BO/memT/retention_prediction_iter_final.xlsx`
 - `memT_BO/memT/RBF 결과/*.xlsx`

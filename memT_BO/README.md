@@ -9,9 +9,14 @@ and acquisition settings, including RBF, Constant x RBF, Rational Quadratic,
 and Matern variants. The portfolio snapshot keeps the scripts and outputs that
 best explain the final workflow while leaving rough local drafts out of Git.
 
-RBF/RQ comparison generated during the project:
+RBF-kernel iteration comparison generated during the project:
 
-![Memtransistor BO RBF/RQ prediction comparison](assets/memT_bo_rbf_rq_prediction_comparison.png)
+The top row shows the prediction surface and EI map trained from the initial
+six experimental conditions. The bottom row shows the final prediction after
+adding one more measured condition and retraining the RBF Gaussian-process
+model.
+
+![Memtransistor BO RBF iteration comparison](assets/memT_bo_rbf_iteration_comparison.png)
 
 Preview regenerated from the saved CSV prediction grid:
 
@@ -118,7 +123,7 @@ whether to continue with a newly measured point.
 - `TFT/250723 TFT BO_HH/next_point_iter_0.csv`
 - `memT/csv input/onoff_ratio_prediction_iter_0.csv`
 - `memT/csv input/next_point_iter_0.csv`
-- `assets/memT_bo_rbf_rq_prediction_comparison.png`
+- `assets/memT_bo_rbf_iteration_comparison.png`
 - `assets/memT_bo_generated_prediction_preview.png`
 - `memT/RBF 결과/*.xlsx`
 - `memT/retention_prediction_iter_final.xlsx`
