@@ -139,7 +139,72 @@ optimization loop: select a candidate grid, fit a surrogate model, score
 Expected Improvement, recommend the next experiment, and preserve each
 iteration for review.
 
-## 5. `AAT_ap`, `AAT_ap_2`, `AAT_ap_scaled`
+## 5. `SECOM_Defect_Prediction`
+
+Semiconductor defect-prediction and hyperparameter-optimization portfolio
+project.
+
+Purpose:
+
+- model rare semiconductor fail samples from SECOM process-sensor data,
+- handle class imbalance with recall/F1/PR-AUC-oriented evaluation,
+- compare median and KNN imputation choices,
+- keep SMOTE and feature selection inside the modeling pipeline to avoid
+  leakage,
+- compare Logistic Regression, Random Forest, SVM, Gradient Boosting, and
+  XGBoost,
+- document hyperparameter tuning and threshold tradeoffs for missed-fail versus
+  false-alarm decisions.
+
+Key files:
+
+- `README.md`: project overview and run commands.
+- `MODEL_CARD.md`: final model snapshot, limitations, and next steps.
+- `docs/REQUIREMENT_TRACEABILITY.md`: maps original requirements to code and reports.
+- `docs/PORTFOLIO_BRIEF_KR.md`: Korean interview brief.
+- `run_experiment.py`: model-comparison entry point.
+- `tune_model.py`: RandomizedSearchCV tuning entry point.
+- `threshold_analysis.py`: recall/false-alarm threshold analysis.
+- `reports/final/`: curated figures, CSVs, selected features, and tuning outputs.
+
+Why it matters:
+
+This folder turns a common Kaggle-style semiconductor dataset into a
+manufacturing-oriented portfolio story: accuracy is not enough under class
+imbalance, preprocessing choices matter, and operating thresholds should be
+chosen with missed-fail cost in mind.
+
+## 6. `MES_SQLD_Practice`
+
+SQLD-level semiconductor MES practice project using SQLite.
+
+Purpose:
+
+- practice basic SQL through a semiconductor MES scenario,
+- filter low-yield or defective wafers,
+- compare yield before and after equipment PM events,
+- create simple wafer-map defect preprocessing features,
+- keep the SQL easy enough to explain in interviews.
+
+Key files:
+
+- `README.md`: project overview, run commands, and query map.
+- `sql/schema.sql`: sample MES table definitions.
+- `sql/seed_data.sql`: synthetic practice data.
+- `queries/01_defect_wafer_filter.sql`: low-yield wafer filtering.
+- `queries/02_pm_yield_relation.sql`: PM-before/after yield comparison.
+- `queries/03_wafer_map_defect_preprocess.sql`: wafer-map feature creation.
+- `docs/INTERVIEW_BRIEF_KR.md`: Korean interview talking points.
+- `docs/SQLD_SCOPE.md`: SQL concepts used and intentionally avoided.
+- `outputs/`: generated CSV and Markdown query results.
+
+Why it matters:
+
+This folder shows that SQLD fundamentals can be connected to semiconductor
+manufacturing data without pretending to be a senior DBA. It emphasizes
+explainable joins, filtering, grouping, and CASE logic.
+
+## 7. `AAT_ap`, `AAT_ap_2`, `AAT_ap_scaled`
 
 Iterative RBF experiment branches.
 
@@ -165,7 +230,7 @@ These folders document the development history and the scientific reasoning
 behind implementation choices such as distinct centers, fixed kernel budget,
 and device-to-model sigma scaling.
 
-## 6. `RBFRQ`
+## 8. `RBFRQ`
 
 Transfer-curve model comparison.
 
@@ -186,7 +251,7 @@ Why it matters:
 This folder supports the device-modeling side of the portfolio by showing that
 transfer-curve shape analysis was considered beyond a single Gaussian fit.
 
-## 7. `RBF_Power_Prediction`
+## 9. `RBF_Power_Prediction`
 
 Early paper-reproduction prototype.
 
@@ -205,7 +270,7 @@ Key files:
 - `src/rbf_network.py`, `src/trainer.py`, `src/visualizer.py`: modular prototype code.
 - `Fig4h_*`, `Fig4i_*`, `Fig4j_*`, `Fig4k_*`: generated figure outputs.
 
-## 8. `RBF2`
+## 10. `RBF2`
 
 Baseline and reproducibility refinement.
 
@@ -236,5 +301,9 @@ Key files:
   library using amplitude, center, width, and direct curves.
 - How `FEDL_Data` turns raw measurement exports into auditable plotting input
   and fast visual review outputs.
+- Why class imbalance changes the evaluation policy for semiconductor defect
+  prediction.
+- How simple SQL joins and CASE expressions can support MES-style wafer and PM
+  screening.
 - What tradeoffs exist when mapping device-domain voltage parameters into a
   standardized input feature space.

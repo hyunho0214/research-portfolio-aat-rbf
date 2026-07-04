@@ -1,0 +1,7 @@
+{
+  "model": "logistic_balanced",
+  "best_cv_f1_fail": 0.17621434942506517,
+  "best_params": {
+    "model__C": 0.0019517224641449498
+  }
+}

@@ -1,0 +1,7 @@
+model,true_pass_pred_pass,true_pass_pred_fail,true_fail_pred_pass,true_fail_pred_fail
+dummy_most_frequent,1463,0,104,0
+logistic_balanced,1123,340,47,57
+random_forest_balanced,1428,35,98,6
+svm_rbf_balanced,1388,75,93,11
+gradient_boosting,1359,104,83,21
+xgboost_weighted,1072,391,40,64

@@ -1,9 +1,10 @@
-# Research Portfolio: Hardware-Aware RBF and AAT Kernel Modeling
+# Research Portfolio: Semiconductor Data, Device Modeling, and Lab Automation
 
 This repository collects laboratory research code, data-processing scripts, and
 reproducibility artifacts developed while exploring anti-ambipolar transistor
 (AAT)-derived Gaussian kernels for forecasting and dynamical-system
-reconstruction.
+reconstruction. It also includes semiconductor data-analysis portfolio projects
+covering yield-defect prediction and SQLD-style MES query practice.
 
 The projects show a progression from paper reproduction to a more
 hardware-aware modeling framework:
@@ -17,6 +18,10 @@ hardware-aware modeling framework:
    review.
 6. Apply Bayesian optimization to TFT and memtransistor process-condition
    screening with saved next-experiment recommendations.
+7. Build a SECOM semiconductor defect-prediction workflow with imbalance-aware
+   metrics, SMOTE, feature selection, and hyperparameter tuning.
+8. Practice SQLD fundamentals through a simple semiconductor MES SQLite
+   workflow for wafer filtering, PM/yield comparison, and wafer-map preprocessing.
 
 ## Why This Repository Exists
 
@@ -26,6 +31,7 @@ organized to provide concrete evidence of:
 - scientific Python development for experimental-device research,
 - numerical modeling with RBF networks and least-squares readouts,
 - Gaussian and rational-quadratic curve fitting of device transfer curves,
+- semiconductor yield prediction and SQLD/MES query practice,
 - reproducible command-line workflows with saved metrics, figures, and
   configuration files,
 - documentation written for future lab use and manuscript preparation.
@@ -41,6 +47,8 @@ For a quick review, start with these files:
 - [new_AAT/README.md](new_AAT/README.md): packaged hardware-aware AAT kernel library.
 - [FEDL_Data/README.md](FEDL_Data/README.md): FEDL raw-data preprocessing and plotting GUI.
 - [memT_BO/README.md](memT_BO/README.md): Bayesian optimization workflow for TFT and memtransistor process screening.
+- [SECOM_Defect_Prediction/README.md](SECOM_Defect_Prediction/README.md): semiconductor defect prediction and tuning workflow.
+- [MES_SQLD_Practice/README.md](MES_SQLD_Practice/README.md): SQLD-level MES practice using SQLite.
 
 ## Project Highlights
 
@@ -50,6 +58,8 @@ For a quick review, start with these files:
 | `new_AAT` | Installable hardware-aware kernel package using measured AAT curve parameters | `pyproject.toml`, package source, pytest tests, config example |
 | `FEDL_Data` | FEDL raw measurement preprocessing and MATLAB-assisted plotting GUI | Tkinter apps, sample raw data, generated plots, distributable executables |
 | `memT_BO` | Bayesian optimization of TFT and memtransistor process conditions | GPR/EI scripts, kernel comparisons, seed CSVs, prediction grids, next-point recommendations |
+| `SECOM_Defect_Prediction` | Semiconductor defect prediction with imbalance-aware ML evaluation | model comparison, SMOTE, feature selection, tuning, final report artifacts |
+| `MES_SQLD_Practice` | SQLD-level semiconductor MES query practice | SQLite schema, easy SQL queries, generated CSV/Markdown outputs, interview brief |
 | `AAT_ap`, `AAT_ap_2`, `AAT_ap_scaled` | Iterative RBF implementations and comparison experiments | reports, guides, metrics, prediction overlays |
 | `RBFRQ` | Gaussian vs rational-quadratic fitting of transfer curves | fitting script, summary CSVs, trend plots |
 | `RBF_Power_Prediction`, `RBF2` | Early reproduction prototypes and baselines | source modules, figure reproduction scripts, baseline comparisons |
@@ -83,9 +93,19 @@ Regenerated preview from saved memT BO CSV output:
 
 ![Memtransistor BO generated prediction preview](memT_BO/assets/memT_bo_generated_prediction_preview.png)
 
+SECOM defect-prediction model comparison:
+
+![SECOM model comparison](SECOM_Defect_Prediction/reports/final/model_metric_comparison.png)
+
+SQLD MES practice output:
+
+- [PM/yield comparison table](MES_SQLD_Practice/outputs/02_pm_yield_relation.md)
+- [Wafer-map preprocessing table](MES_SQLD_Practice/outputs/03_wafer_map_defect_preprocess.md)
+
 ## Technical Stack
 
 - Python, NumPy, pandas, SciPy, scikit-learn, matplotlib
+- SQLite and SQLD-level SQL practice queries
 - openpyxl for Excel-based experimental data ingestion
 - pytest for smoke and unit tests
 - PowerShell-oriented command examples for Windows lab workflows

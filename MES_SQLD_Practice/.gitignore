@@ -1,0 +1,12 @@
+# Reproducible SQLite database files
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local scratch files
+*.tmp
+*.bak

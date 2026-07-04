@@ -146,6 +146,51 @@ Representative memT BO outputs:
 - `memT_BO/memT/retention_prediction_iter_final.xlsx`
 - `memT_BO/memT/RBF 결과/*.xlsx`
 
+## `SECOM_Defect_Prediction`
+
+Install the required ML dependencies:
+
+```powershell
+cd SECOM_Defect_Prediction
+py -3 -m pip install -r requirements.txt
+```
+
+Run a compile check:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_validation.ps1 -Mode compile
+```
+
+Run the smoke benchmark:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_validation.ps1 -Mode smoke
+```
+
+Representative SECOM outputs:
+
+- `SECOM_Defect_Prediction/reports/final/model_metric_comparison.png`
+- `SECOM_Defect_Prediction/reports/final/best_model_confusion_matrix.png`
+- `SECOM_Defect_Prediction/reports/final/threshold_tradeoff.png`
+- `SECOM_Defect_Prediction/reports/final/metrics_summary.csv`
+- `SECOM_Defect_Prediction/reports/final/tuning_logistic_best_params.json`
+
+## `MES_SQLD_Practice`
+
+Run the SQLite practice workflow:
+
+```powershell
+cd MES_SQLD_Practice
+powershell -ExecutionPolicy Bypass -File scripts\run_validation.ps1
+```
+
+Representative SQLD/MES outputs:
+
+- `MES_SQLD_Practice/outputs/01_defect_wafer_filter.csv`
+- `MES_SQLD_Practice/outputs/02_pm_yield_relation.csv`
+- `MES_SQLD_Practice/outputs/03_wafer_map_defect_preprocess.csv`
+- `MES_SQLD_Practice/outputs/run_summary.md`
+
 ## Notes on Data and Outputs
 
 - Experimental data and generated outputs are intentionally included for

@@ -1,0 +1,13 @@
+# Raw public data and generated artifacts are reproducible and should not be committed.
+data/raw/
+data/processed/
+reports/*
+!reports/.gitkeep
+!reports/final/
+!reports/final/**
+models/
+
+# Local notebooks/checkpoints
+.ipynb_checkpoints/
+*.tmp
+*.bak

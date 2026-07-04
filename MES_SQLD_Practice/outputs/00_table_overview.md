@@ -1,0 +1,6 @@
+| table_name | row_count |
+| --- | --- |
+| equipment_master | 4 |
+| pm_history | 3 |
+| wafer_process_log | 20 |
+| wafer_die_map | 31 |

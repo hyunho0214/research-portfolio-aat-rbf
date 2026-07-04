@@ -1,0 +1,2 @@
+model,true_pass_pred_pass,true_pass_pred_fail,true_fail_pred_pass,true_fail_pred_fail
+logistic_balanced,196,97,7,14
